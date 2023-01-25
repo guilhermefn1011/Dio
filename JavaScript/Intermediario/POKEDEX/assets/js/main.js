@@ -1,5 +1,8 @@
 const pokemonList = document.getElementById("pokemonList");
 const loadMoreButton = document.getElementById("loadMoreButton");
+const pokemonDetails = document.getElementById("pokemonDetails");
+const shinyButton = document.getElementById("shinyButton");
+
 const limit = 12;
 var offset = 0;
 
@@ -11,23 +14,27 @@ function loadPokemonItens(offset, limit) {
       .map(
         (pokemon) =>
           `
-          <li class="pokemon ${pokemon.type}">
-                <span class="number">#${pokemon.number}</span>
-                <span class="name">${pokemon.name}</span>
-      
-                <div class="detail">
-                  <ol class="types">
-                      ${pokemon.types
-                        .map((type) => `<li class="type ${type}">${type}</li>`)
-                        .join("")}
-                  </ol>
-                  <img
-                    src=${pokemon.photo}
-                    alt="${pokemon.name}"
-                  />
-                </div>
+              <li id="teste" class="pokemon ${
+                pokemon.type
+              }" onclick="openDetails(${pokemon.number})">
+                    <span class="number">#${pokemon.number}</span>
+                    <span class="name">${pokemon.name}</span>
+          
+                    <div class="detail">
+                      <ol class="types">
+                          ${pokemon.types
+                            .map(
+                              (type) => `<li class="type ${type}">${type}</li>`
+                            )
+                            .join("")}
+                      </ol>
+                      <img
+                        src=${pokemon.photo}
+                        alt="${pokemon.name}"
+                      />
+                    </div>
               </li>
-              `
+          `
       )
       .join("");
     pokemonList.innerHTML += newHtml;
@@ -41,3 +48,39 @@ loadMoreButton.addEventListener("click", () => {
   offset += limit;
   loadPokemonItens(offset, limit);
 });
+
+//função para criar a janela com informações do pokemon
+function openDetails(i) {
+  pokeApi.getEspecificPokemon(i).then((pokemon) => {
+    const pokeDetailHtml = `
+    <div class="pokeDetails">
+      <button id="closeDetails" onclick="closeDetails()">
+      X
+      </button>
+      <h1 class="pokeDetailName">${pokemon.name}</h1>
+    
+      <img id="pokeDetailPhoto" src="${pokemon.photo}" alt="${pokemon.name} Image">
+  
+      <p>Weight: ${pokemon.weight}</p>
+  
+      <ol class="stats">
+        <li class="stat">${pokemon.stats[0].stat.name} : ${pokemon.stats[0].base_stat}</li>
+        <li class="stat">${pokemon.stats[1].stat.name} : ${pokemon.stats[1].base_stat}</li>
+        <li class="stat">${pokemon.stats[2].stat.name} : ${pokemon.stats[2].base_stat}</li>
+        <li class="stat">${pokemon.stats[3].stat.name} : ${pokemon.stats[3].base_stat}</li>
+        <li class="stat">${pokemon.stats[4].stat.name} : ${pokemon.stats[4].base_stat}</li>
+        <li class="stat">${pokemon.stats[5].stat.name} : ${pokemon.stats[5].base_stat}</li>
+      </ol>
+    </div>
+    `;
+
+    pokemonDetails.innerHTML = pokeDetailHtml;
+
+    pokemonDetails.style.display = "inline";
+  });
+}
+
+//função para fechar a janela de detalhes do pokemon
+function closeDetails() {
+  pokemonDetails.style.display = "none";
+}

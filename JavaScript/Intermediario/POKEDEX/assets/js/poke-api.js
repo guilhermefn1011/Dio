@@ -1,3 +1,4 @@
+const pokeEspecificApi = {};
 const pokeApi = {};
 
 //função para converter o padrão de dados do pokeApi para um modelo próprio
@@ -11,7 +12,10 @@ function convertpokeApiToPokemon(pokeDetail) {
 
   pokemon.types = types;
   pokemon.type = type;
+  pokemon.weight = pokeDetail.weight;
   pokemon.photo = pokeDetail.sprites.front_default;
+  pokemon.shiny = pokeDetail.sprites.front_shiny;
+  pokemon.stats = pokeDetail.stats;
 
   return pokemon;
 }
@@ -30,5 +34,13 @@ pokeApi.getPokemons = (offset, limit) => {
     .then((pokemons) => pokemons.map(pokeApi.getPokemonDetail))
     .then((detailRequest) => Promise.all(detailRequest))
     .then((pokemonDetails) => pokemonDetails)
+    .catch((error) => console.error(error));
+};
+
+pokeApi.getEspecificPokemon = (i) => {
+  const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+  return fetch(url)
+    .then((response) => response.json())
+    .then(convertpokeApiToPokemon)
     .catch((error) => console.error(error));
 };
