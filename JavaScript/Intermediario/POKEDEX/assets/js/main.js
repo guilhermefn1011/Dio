@@ -59,7 +59,7 @@ function openDetails(i) {
       </button>
       <h1 class="pokeDetailName">${pokemon.name}</h1>
     
-      <img id="pokeDetailPhoto" src="${pokemon.photo}" alt="${pokemon.name} Image">
+      <img id="pokeDetailPhoto" src="${pokemon.photo}" alt="${pokemon.name} Image" onclick="changeImage('${pokemon.shiny}', '${pokemon.photo}')">
   
       <p>Weight: ${pokemon.weight}</p>
   
@@ -83,4 +83,12 @@ function openDetails(i) {
 //função para fechar a janela de detalhes do pokemon
 function closeDetails() {
   pokemonDetails.style.display = "none";
+}
+
+function changeImage(urlShiny, urlNormal) {
+  if (pokeDetailPhoto.src == urlNormal) {
+    pokeDetailPhoto.src = urlShiny;
+  } else {
+    pokeDetailPhoto.src = urlNormal;
+  }
 }
