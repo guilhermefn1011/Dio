@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Guilherme Fernandez</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/acordeon.css">
+    <link rel="stylesheet" href="/assets/css/languages.css">
+    <link rel="stylesheet" href="/assets/css/portfolio.css">
+    <link rel="stylesheet" href="/assets/css/professional.css">
+    <link rel="stylesheet" href="/assets/css/skills.css">
+    <link rel="stylesheet" href="/assets/css/education.css">
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">
+            <img src="/assets/img/fotoperfil.jpeg" alt="Foto de Perfil" class="photo">
+
+            <h1 class="title">Guilherme Fernandez</h1>
+
+            <div class="coreInfo">
+                <p class="job">Junior Developer</p>
+                <p class="location">São Paulo - SP</p>
+                <p class="phone"><a href="tel:">(11)9 9633-7656</a></p>
+                <p class="mail"><a href="mailto:guilhermefn1011@gmail.com">guilhermefn1011@gmail.com</a></p>
+            </div>
+        </header>
+
+        <section class="acordeon">
+            <button class="trigger" type="button">
+                <h2>Idiomas</h2>
+            </button>
+
+            <div class="content">
+                <ul class="languages">
+                    <li>Português</li>
+                    <li>Inglês</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="acordeon">
+            <button class="trigger" type="button">
+                <h2>Portfólio</h2> 
+            </button>
+
+            <div class="content">
+                <ul class="portfolio">
+                    <li>
+                        <h3 class="title github">Criando uma Pokedex</h3>
+                        <a href="https://github.com/guilhermefn1011/Dio/tree/main/JavaScript/Intermediario/POKEDEX" target="_blank">https://github.com/POKEDEX</a>
+                    </li>
+                    <li>
+                        <h3 class="title github">Criando uma Pokedex</h3>
+                        <a href="www.google.com.br" target="_blank">www.google.com.br</a>
+                    </li>
+                    <li>
+                        <h3 class="title">Criando uma Pokedex</h3>
+                        <a href="www.google.com.br" target="_blank">www.google.com.br</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        
+        <section class="acordeon">
+            <button class="trigger" type="button">
+              <h2>Experiência Profissional</h2>
+            </button>
+
+            <div class="content">
+                <ul class="professional">
+                    <li>
+                        <h3 class="title">Analista de Suporte Jr - Listo</h3>
+                        <h4 class="period">Jul 2021 - Mai 2022</h4>
+                        <p>Solucionar incidentes, propor otimizações nos processos, realizar documentações de procedimentos e processos,
+                            administrar acessos de segurança e rede (AD) e admnistrar iventário de TI.</p>
+                    </li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="acordeon">
+            <button class="trigger" type="button">
+                <h2>Habilidades</h2>
+            </button>
+
+            <div class="content">
+                <div class="skills">
+                    <section class="hardSkills">
+                        <h3>Hard Skills</h3>
+                        <ul>
+                            <li>
+                                <img src="/assets/img/Icons/languages/react-white.svg" alt="react" title="react">
+                                <img src="/assets/img/Icons/languages/mysql-white.svg" alt="mysql" title="mysql">
+                                <img src="/assets/img/Icons/languages/css-white.svg" alt="css" title="css">
+                                <img src="/assets/img/Icons/languages/js-white.svg" alt="js" title="js">
+                                <img src="/assets/img/Icons/languages/html-white.svg" alt="html" title="html">
+                                <img src="/assets/img/Icons/languages/github.svg" alt="github" title="github">
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="softSkills">
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Proatividade</li>
+                            <li>Criatividade</li>
+                            <li>Empatia</li>
+                            <li>Relacionamento interpessoal</li>
+                            <li>Resiliência</li>
+                            <li>Pensamento Crítico</li>
+                        </ul>
+                    </section>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="acordeon">
+            <button class="trigger" type="button">
+                <h2>Formação</h2>
+            </button>
+
+            <div class="content">
+                <ul class="education">
+                    <li class="course"><h3>Engenharia de Produção</h3></li>
+                    <li class="institution"><strong>FIAP</strong></li>
+                    <li class="period">Jan 2016 - Dez 2020</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="/assets/js/acordeon.js"></script>
+</body>
+
+</html>
