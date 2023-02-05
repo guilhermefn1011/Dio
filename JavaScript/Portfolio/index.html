@@ -28,15 +28,21 @@
 <body>
     <div class="main">
         <header class="header">
-            <img src="/assets/img/fotoperfil.jpeg" alt="Foto de Perfil" class="photo">
+            <img src="/assets/img/user.png" alt="Foto de Perfil" class="photo" id="profile.photo">
 
-            <h1 class="title">Guilherme Fernandez</h1>
+            <h1 class="title">
+                Olá, <br>eu sou <span id="profile.name">Carregando...</span> 
+            </h1>
 
             <div class="coreInfo">
-                <p class="job">Junior Developer</p>
-                <p class="location">São Paulo - SP</p>
-                <p class="phone"><a href="tel:">(11)9 9633-7656</a></p>
-                <p class="mail"><a href="mailto:guilhermefn1011@gmail.com">guilhermefn1011@gmail.com</a></p>
+                <p class="job" id="profile.job">Carregando...</p>
+                <p class="location" id="profile.location">Carregando...</p>
+                <p class="phone">
+                    <a href="tel:" id="profile.phone">Carregando...</a>
+                </p>
+                <p class="mail">
+                    <a href="mailto:guilhermefn1011@gmail.com" id="profile.email">Carregando...</a>
+                </p>
             </div>
         </header>
 
@@ -118,13 +124,10 @@
 
                     <section class="softSkills">
                         <h3>Soft Skills</h3>
-                        <ul>
-                            <li>Proatividade</li>
-                            <li>Criatividade</li>
-                            <li>Empatia</li>
-                            <li>Relacionamento interpessoal</li>
-                            <li>Resiliência</li>
-                            <li>Pensamento Crítico</li>
+                        <ul id="profile.skills.softSkills">
+                            <li>Carregando...</li>
+                            <li>Carregando...</li>
+                            <li>Carregando...</li>
                         </ul>
                     </section>
                 </div>
@@ -148,6 +151,8 @@
     </div>
 
     <script src="/assets/js/acordeon.js"></script>
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
 
 </html>

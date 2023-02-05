@@ -82,9 +82,8 @@
     .header .photo{
         grid-area: photo;
         margin: 0 auto;
-        width: 50%;
-        height: 50%;
-        border-radius: 15%;
+        width: 45%;
+        border-radius: 50%;
     }
 
     .header .title{
