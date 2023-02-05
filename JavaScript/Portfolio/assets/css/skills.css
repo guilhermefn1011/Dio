@@ -10,9 +10,9 @@
 }
 
 .skills .hardSkills ul {
+    justify-content: center;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     margin: 0;
@@ -22,13 +22,14 @@
 
 .skills .hardSkills ul li img {
    max-width: 50px;
+   max-height: 50px;
    margin: .5rem;
 }
 
 .skills .softSkills ul {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 0;
