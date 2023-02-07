@@ -78,17 +78,17 @@
     "education": [
       {
         "course":"MBA Engenharia de Software",
-        "insituition": "IMPACTA",
+        "institution": "IMPACTA",
         "period": "Mar 2022 - Jun 2023"
       },
       {
         "course":"Bacharelado Engenharia de Produção",
-        "insituition": "FIAP",
+        "institution": "FIAP",
         "period": "Jan 2016 - Dez 2020"
       },
       {
         "course":"Formação JavaScript Developer",
-        "insituition": "DIO",
+        "institution": "DIO",
         "period": "Jan 2023 - Fev 2023"
       }
     ]
